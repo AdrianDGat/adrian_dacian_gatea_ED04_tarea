@@ -1,11 +1,14 @@
 package cuentas;
 
 
-
+ 
 
 
 /**
- * La clase CCuenta representa una cuenta bancaria.
+ * 
+ * @author adrian
+ * La clase CCuenta representa una cuenta bancaria.ç
+ * 
  * Tienen la informacion: el nombre del titular ,el número de cuenta, el saldo y el tipo de interés.
  */
 public class CCuenta {
@@ -74,15 +77,30 @@ public class CCuenta {
         this.tipoInterés = tipoInterés;
     }
 
+    /**
+     *
+     */
     public CCuenta() {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo) {
         nombre = nom;
         cuenta = cue;
         saldo = sal;
     }
     //metodo que devuelve el saldo
+
+    /**
+     *
+     * @return
+     */
     public double estado() {
         return getSaldo();
     }

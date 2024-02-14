@@ -11,4 +11,5 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>cuentas.Adrian_dacian_gatea_ED04_tarea</exec.mainClass>
     </properties>
+    <name>adrian_dacian_gatea_ED04_tarea</name>
 </project>

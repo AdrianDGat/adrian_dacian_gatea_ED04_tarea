@@ -1,14 +1,28 @@
 package cuentas;
 
+/**
+ * Clase principal que contiene el método main para realizar operaciones en una cuenta bancaria.
+ * 
+ * @author adrian
+ */
 public class Main {
 
+    /**
+     *
+     * @param args 
+     *
+     */
     public static void main(String[] args) {
         CCuenta cuenta1;
         double saldoActual;
         float cantidad = 0f;
         operativa_cuenta(cantidad);
     }
-
+     /**
+     * Realiza operaciones en una cuenta bancaria de ejemplo.
+     * 
+     * @param cantidad La cantidad a utilizar en las operaciones.
+     */
     static void operativa_cuenta(float cantidad) {
         CCuenta cuenta1;
         double saldoActual;
