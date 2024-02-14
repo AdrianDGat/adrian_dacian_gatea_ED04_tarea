@@ -1,5 +1,13 @@
 package cuentas;
 
+
+
+
+
+/**
+ * La clase CCuenta representa una cuenta bancaria.
+ * Tienen la informacion: el nombre del titular ,el número de cuenta, el saldo y el tipo de interés.
+ */
 public class CCuenta {
 
     private String nombre;
@@ -7,6 +15,9 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    
+    
+    // getters y setters
     /**
      * @return the nombre
      */
@@ -71,25 +82,52 @@ public class CCuenta {
         cuenta = cue;
         saldo = sal;
     }
-
+    //metodo que devuelve el saldo
     public double estado() {
         return getSaldo();
     }
-
+    
+    
+    
+    
+//metodo para ingresar cantidad en cuenta
+    
+      /**
+     * @param cantidad La cantidad a ingresar en la cuenta.
+     * @throws Exception Si la cantidad es negativa.
+     */
     public void ingresar(double cantidad) throws Exception {
         if (cantidad < 0) {
             throw new Exception("No se puede ingresar una cantidad negativa");
         }
         setSaldo(getSaldo() + cantidad);
     }
-
+    
+    
+    
+    
+    
+    
+//metodo para retirar cantidad de la cuenta
+    
+    
+    
+    
+     /**
+     * @param cantidad La cantidad a retirar de la cuenta.
+     * @throws Exception Si la cantidad es negativa o si no hay suficiente saldo.
+     */
     public void retirar(double cantidad) throws Exception {
+        
+        //condicion : si cantidad es menor o igual a 0 muestra exception con mensaje
         if (cantidad <= 0) {
             throw new Exception("No se puede retirar una cantidad negativa");
         }
+         //condicion: si estado es menor a cantidad , muestra mensaje       
         if (estado() < cantidad) {
             throw new Exception("No se hay suficiente saldo");
         }
+        //si no se cumple ninguna condicion anterior al saldo se le resta la cantidad .
         setSaldo(getSaldo() - cantidad);
     }
 }
